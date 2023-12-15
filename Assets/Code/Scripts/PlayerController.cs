@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Variable para la velocidad del avión
     public float moveSpeed;
+    //Referencia al RB
+    public Rigidbody2D rb;
 
-    void FixedUpdate()
+    private void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized * moveSpeed;
+        //Inicializamos la referencia al Rigidbody
+        //rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized * moveSpeed;
     }
 }

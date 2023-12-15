@@ -178,8 +178,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1497645673
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1350050115, guid: 6b65c931e70a4634d857fa0b68249f9d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 727800191}
   - component: {fileID: 727800190}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Puntuation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1262,9 +1262,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -1796123471
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -281140248, guid: 0908b13bce92254469504d71e87f2873, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1289,6 +1289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  rb: {fileID: 2054995139}
 --- !u!50 &2054995139
 Rigidbody2D:
   serializedVersion: 4
