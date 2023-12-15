@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     //Referencia al RB
     public Rigidbody2D rb;
+    //Referencia a la bala
+    public GameObject bullet;
+    //Referencia al punto de disparo del avión
+    public Transform firePoint;
 
     private void Start()
     {
@@ -17,6 +21,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //Movimiento en las 4 direcciones y en diagonal
         rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized * moveSpeed;
+
+        //Si pulsamos para disparar una bala
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Crear un objeto es crear una instancia que es una unidad de algo
+            //Le pasamos el objeto que queremos que aparezca, en la posición y rotación que queremos que aparezca
+            Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
+        }
     }
 }

@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -160,7 +173,7 @@ TextureImporter:
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,6 +181,216 @@ TextureImporter:
       bones: []
       spriteID: 1fdd4020d85b86e43aea239a39c65143
       internalID: 1650413220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 692
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41478b24c1129da4c8abbf1dd4ee2538
+      internalID: 105993833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 692
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316d9ca77614ca5498440f9289907b87
+      internalID: -1781855843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_5
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 692
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebc46e0ff5ee3a4381bafab856c536d
+      internalID: -264106641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_6
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 692
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c90458a494503945986eff8122081aa
+      internalID: 1527509840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_7
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 691
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76064c165d43634485143e0be912e12
+      internalID: -444780048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_8
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 691
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba11e8849c63bd4e8b5cf425d87ee7c
+      internalID: -845486474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 691
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7647fb8bda72b424c93b5b4dcc1992c8
+      internalID: -1721967786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_10
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 691
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c23ffce63433b4489c4414edbf1baca
+      internalID: 2059627323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_11
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 691
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063281d00fbaae04bb52665b855dbd7c
+      internalID: 227605431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: airshipsUI_12
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 691
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205915a14f1eef541b360e5a62a7c13c
+      internalID: 530183645
       vertices: []
       indices: 
       edges: []
@@ -185,7 +408,17 @@ TextureImporter:
     nameFileIdTable:
       airshipsUI_0: -281140248
       airshipsUI_1: 912847481
+      airshipsUI_10: 2059627323
+      airshipsUI_11: 227605431
+      airshipsUI_12: 530183645
       airshipsUI_2: 1650413220
+      airshipsUI_3: 105993833
+      airshipsUI_4: -1781855843
+      airshipsUI_5: -264106641
+      airshipsUI_6: 1527509840
+      airshipsUI_7: -444780048
+      airshipsUI_8: -845486474
+      airshipsUI_9: -1721967786
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
