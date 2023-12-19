@@ -25,7 +25,16 @@ public class EnemySpawner : MonoBehaviour
         //Si el contador de spawn no está vacío
         if(spawnCounter > 0)
         {
+            //Le restamos al contador 1 cada segundo
             spawnCounter -= Time.deltaTime;
+        }
+        //Si el contador está vacío
+        else
+        {
+            //Debug.Log(spawnCounter);
+            SpawnEnemy();
+            //Reiniciamos el contador para que empiece de nuevo
+            spawnCounter = spawnTime;
         }
 
     }
