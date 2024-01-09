@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public Transform firePoint;
     //Referencia a la UI
     public UIController uiReference;
+    //Referencia al GameManager
+    public GameManager gmReference;
 
     private void Start()
     {
@@ -30,11 +32,14 @@ public class PlayerController : MonoBehaviour
 
         //Si pulsamos para disparar una bala
         if (Input.GetKeyDown(KeyCode.Space))
-        {
             //Crear un objeto es crear una instancia que es una unidad de algo
             //Le pasamos el objeto que queremos que aparezca, en la posición y rotación que queremos que aparezca
             Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
-        }
+
+        //Reiniciamos la partida al perder las 3 vidas
+        if(lifes <= 0)
+            //Llamamos al método que reinicia el juego
+            gmReference.ResetGame();
     }
 
     //Método para saber cuando un objeto se ha metido en el Trigger del jugador
@@ -49,6 +54,8 @@ public class PlayerController : MonoBehaviour
             uiReference.UpdateLifes(lifes);
             //Destruimos la nave enemiga
             Destroy(collision.gameObject);
+            //Llamo al método de empezar una nueva vida
+            gmReference.AnotherLife();
         }
     }
 }
