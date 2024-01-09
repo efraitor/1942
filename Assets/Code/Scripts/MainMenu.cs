@@ -16,6 +16,18 @@ public class MainMenu : MonoBehaviour
     //Método que me lleva al juego
     public void StartGame()
     {
+        //Llamamos a la corrutina
+        StartCoroutine(StartGameCo());
+    }
+
+    //Corrutina para iniciar el juego
+    private IEnumerator StartGameCo()
+    {
+        //Ponemos el sonido de empezar el juego
+        AudioManager.amInstance.PlaySFX(9);
+        //Esperamos dos segundos
+        yield return new WaitForSeconds(2f);
+        //Cargamos la escena de juego
         SceneManager.LoadScene("Game");
     }
 }
