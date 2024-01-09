@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
     //Método para saber cuando un objeto se ha metido en el Trigger del jugador
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Si se ha metido un enemigo
-        if (collision.CompareTag("Enemy")) 
+        //Si se ha metido un enemigo, o una bala enemiga
+        if (collision.CompareTag("Enemy") || collision.CompareTag("EnemyBullet"))
         {
             //Le restamos una vida al jugador
             lifes--;

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement; //Librería para cambiar entre escenas
 
 public class GameManager : MonoBehaviour
 {
-    //Referencia al jugador
-    public GameObject player;
+    //Referencia al jugador y al spawner de enemigos
+    public GameObject player, enemySpawner;    
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +41,13 @@ public class GameManager : MonoBehaviour
         player.SetActive(false);
         //Ponemos al jugador en la posición de origen
         player.transform.position = new Vector2(0f, -1f);
+        //Desactivamos el spawner de los enemigos
+        enemySpawner.SetActive(false);
         //Esperamos un tiempo en segundos(hace una pausa de 2 seg)
         yield return new WaitForSeconds(2f);
         //Reactivamos al jugador
         player.SetActive(true);
+        //Reactivamos el spawner de los enemigos
+        enemySpawner.SetActive(true);
     }
 }
