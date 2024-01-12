@@ -18,17 +18,30 @@ public class PlayerController : MonoBehaviour
     public UIController uiReference;
     //Referencia al GameManager
     public GameManager gmReference;
+    //Referencia a la cámara del juego
+    public Camera mainCamera;
+    //Vector para controlar la posición relativa a lo que ve la cámara
+    Vector3 viewPosition;
 
     private void Start()
     {
         //Inicializamos la referencia al Rigidbody
         //rb = GetComponent<Rigidbody2D>();
+        //Referenciamos la cámara principal por código
+        mainCamera = Camera.main;
+        //Generamos un Vector de tres coordenadas (x, y, z)
+        //ViewportToWorldPoint (coge los puntos que conforman lo que ve la cámara, y los transforma a puntos del mundo de Unity)
+        viewPosition = mainCamera.ViewportToWorldPoint(transform.position);
     }
 
     void Update()
     {
         //Movimiento en las 4 direcciones y en diagonal
         rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized * moveSpeed;
+        //Si la nave se ha salido por la izquierda o la derecha de lo que ve la cámara
+        if (viewPosition.x > 3.8 || viewPosition.x < -2.8)
+            //Le damos la vuelta al valor en X de la posición de la nave
+            transform.position = new Vector2(transform.position.x * -1, transform.position.y);
 
         //Si pulsamos para disparar una bala
         if (Input.GetKeyDown(KeyCode.Space))

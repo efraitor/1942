@@ -126,10 +126,10 @@ TextureImporter:
       name: backgrounds_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 223
-        height: 1440
+        width: 224
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,9 +148,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 0
+        y: 992
         width: 224
-        height: 1504
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,7 +236,7 @@ TextureImporter:
         width: 224
         height: 432
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,6 +244,27 @@ TextureImporter:
       bones: []
       spriteID: 28451dbf9df6830458e5cb82116ab594
       internalID: 1678109931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgrounds_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 224
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5034747ecd80564e828e9a21deb880a
+      internalID: -788623051
       vertices: []
       indices: 
       edges: []
@@ -265,6 +286,7 @@ TextureImporter:
       backgrounds_3: 338242127
       backgrounds_4: 698987885
       backgrounds_5: 1678109931
+      backgrounds_6: -788623051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
