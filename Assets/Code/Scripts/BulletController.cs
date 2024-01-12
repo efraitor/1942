@@ -37,6 +37,8 @@ public class BulletController : MonoBehaviour
         //Si el objeto contra el que colisionamos es una bala o una bala enemiga
         if(collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("EnemyBullet"))
         {
+            //Sonido de impacto de balas entre sí
+            AudioManager.amInstance.PlaySFX(4);
             //Se destruye el otro objeto
             Destroy(collision.gameObject);
             //Se destruye este objeto

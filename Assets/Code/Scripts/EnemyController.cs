@@ -39,6 +39,8 @@ public class EnemyController : MonoBehaviour
         {
             //Destruimos la bala
             Destroy(collision.gameObject);
+            //Sonido de cuando muere una nave enemiga
+            AudioManager.amInstance.PlaySFX(8);
             //Destruimos la nave
             Destroy(gameObject);
         }
@@ -49,5 +51,7 @@ public class EnemyController : MonoBehaviour
     {
         //Creamos una bala, en la posición frente a la nave, con la rotación de la bala
         Instantiate(enemyBullet, new Vector2(transform.position.x, transform.position.y - .1f), enemyBullet.transform.rotation);
+        //Sonido al disparar una bala
+        AudioManager.amInstance.PlaySFX(0);
     }
 }

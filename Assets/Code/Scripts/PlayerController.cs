@@ -32,14 +32,20 @@ public class PlayerController : MonoBehaviour
 
         //Si pulsamos para disparar una bala
         if (Input.GetKeyDown(KeyCode.Space))
+        {
             //Crear un objeto es crear una instancia que es una unidad de algo
             //Le pasamos el objeto que queremos que aparezca, en la posición y rotación que queremos que aparezca
             Instantiate(bullet, firePoint.transform.position, firePoint.transform.rotation);
+            //Sonido al disparar una bala
+            AudioManager.amInstance.PlaySFX(0);
+        }
 
         //Reiniciamos la partida al perder las 3 vidas
-        if(lifes <= 0)
+        if (lifes <= 0)
+        {    
             //Llamamos al método que reinicia el juego
             gmReference.ResetGame();
+        }    
     }
 
     //Método para saber cuando un objeto se ha metido en el Trigger del jugador
@@ -52,6 +58,9 @@ public class PlayerController : MonoBehaviour
             lifes--;
             //Actualizamos las vidas en la UI
             uiReference.UpdateLifes(lifes);
+            if(lifes > 0)
+                //Reproducimos el sonido de muerte del jugador
+                AudioManager.amInstance.PlaySFX(6);
             //Destruimos la nave enemiga
             Destroy(collision.gameObject);
             //Llamo al método de empezar una nueva vida

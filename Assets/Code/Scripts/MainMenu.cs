@@ -25,8 +25,8 @@ public class MainMenu : MonoBehaviour
     {
         //Ponemos el sonido de empezar el juego
         AudioManager.amInstance.PlaySFX(9);
-        //Esperamos dos segundos
-        yield return new WaitForSeconds(2f);
+        //Esperamos un segundo
+        yield return new WaitForSeconds(1f);
         //Cargamos la escena de juego
         SceneManager.LoadScene("Game");
     }

@@ -23,8 +23,18 @@ public class GameManager : MonoBehaviour
     //Reinicia el juego
     public void ResetGame()
     {
+        //Se llama a la corrutina que resetea el juego
+        StartCoroutine(ResetGameCo());
+    }
+
+    private IEnumerator ResetGameCo()
+    {
+        //Esperamos un segundo y medio
+        yield return new WaitForSeconds(1.5f);
         //Carga la misma escena en la que estamos
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //Sonido de GameOver
+        AudioManager.amInstance.PlaySFX(5);
     }
 
     //Jugar otra nueva vida
