@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class TerrainMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //Velocidad a la que bajan los fondos
+    public float yVelocity;
 
     // Update is called once per frame
     void Update()
     {
-        transform.position -= new Vector3(0f, 0.001f, 0f);
+        transform.position -= new Vector3(0f, yVelocity, 0f);
         if (transform.position.y < -3.84f)
             transform.position = new Vector2(0f, 15.36f);
     }

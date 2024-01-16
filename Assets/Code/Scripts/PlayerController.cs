@@ -18,20 +18,23 @@ public class PlayerController : MonoBehaviour
     public UIController uiReference;
     //Referencia al GameManager
     public GameManager gmReference;
-    //Referencia a la cámara del juego
-    public Camera mainCamera;
-    //Vector para controlar la posición relativa a lo que ve la cámara
-    Vector3 viewPosition;
+
+    //Variable para conocer el máximo punto hacia la izquierda
+    float leftConstraint;
+    //Variable para conocer el máximo punto hacia la derecha
+    float rightConstraint;
+    //Sirve para que la nave desaparezca una vez pasado el borde de la cámara mas esta cantidad
+    float offset = .05f;
 
     private void Start()
     {
         //Inicializamos la referencia al Rigidbody
         //rb = GetComponent<Rigidbody2D>();
-        //Referenciamos la cámara principal por código
-        mainCamera = Camera.main;
-        //Generamos un Vector de tres coordenadas (x, y, z)
-        //ViewportToWorldPoint (coge los puntos que conforman lo que ve la cámara, y los transforma a puntos del mundo de Unity)
-        viewPosition = mainCamera.ViewportToWorldPoint(transform.position);
+        //Le damos valores a esas restricciones
+        //Busca un punto en el espacio de Unity relativo al mismo punto de lo que ve la cámara
+        //Screenwidth es el tamaño de la pantalla de ancho de lo que ve la cámara
+        leftConstraint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * 0.05f, 0.0f, 0.0f)).x;
+        rightConstraint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * 0.95f, 0.0f, 0.0f)).x;
     }
 
     void Update()
@@ -39,9 +42,10 @@ public class PlayerController : MonoBehaviour
         //Movimiento en las 4 direcciones y en diagonal
         rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized * moveSpeed;
         //Si la nave se ha salido por la izquierda o la derecha de lo que ve la cámara
-        if (viewPosition.x > 3.8 || viewPosition.x < -2.8)
-            //Le damos la vuelta al valor en X de la posición de la nave
-            transform.position = new Vector2(transform.position.x * -1, transform.position.y);
+        if (transform.position.x < leftConstraint - offset)
+            transform.position = new Vector2(rightConstraint + offset, transform.position.y);
+        else if (transform.position.x > rightConstraint + offset)
+            transform.position = new Vector2(leftConstraint - offset, transform.position.y);
 
         //Si pulsamos para disparar una bala
         if (Input.GetKeyDown(KeyCode.Space))
